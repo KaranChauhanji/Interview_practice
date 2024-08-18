@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <h1>Todo With JS</h1>
+
+    <form id="form">
+      <label>Title</label>
+      <input type="text" placeholder="Title" id="title" required/>
+      <label>Description</label>
+      <input type="text" placeholder="Description" id="description" required/>
+      <label>Priority</label>
+      <select id="priority" required>
+        <option value="">Choose</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="container"></div>
+    <script src="./todo.js" />
+  </body>
+</html>
