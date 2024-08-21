@@ -1,10 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const connection = require("./config/db");
-require("dotenv").config();
+const userRouter = require("./routes/userRegister.routes");
 const PORT = process.env.PORT;
 
 
 const server = express();
+server.use(express.json())
+server.use('/user', userRouter)
 
 server.get("/", (_, res) => {
   res.send("Server Health check.");
